@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "launch server",
+            "runtimeExecutable": "node",            
+            "runtimeArgs": ["-r", "ts-node/register", "--inspect=9229", "server/index.ts"],
+            "env": {
+              "TS_NODE_PROJECT": "tsconfig.server.json"
+            },
+            "port": 9229
+        },
+        {
+            "type": "firefox",
+            "request": "launch",
+            "name": "Launch Firefox",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
